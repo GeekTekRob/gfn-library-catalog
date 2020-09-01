@@ -1,0 +1,15 @@
+<table *ngIf="arrGames">
+    <!-- ADD HEADERS -->
+    <tr>
+        <th>ID</th>
+            <th>Game</th>
+                <th>Publisher</th>
+    </tr>
+
+    <!-- BIND ARRAY TO TABLE -->
+    <tr *ngFor="let game of arrGames">
+        <td>{{game.ID}}</td>
+            <td>{{game.Title}}</td>
+                <td>{{game.Publisher}}</td>
+    </tr>
+</table>
