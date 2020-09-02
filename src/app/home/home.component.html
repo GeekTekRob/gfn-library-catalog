@@ -1,15 +1,21 @@
-<table *ngIf="arrGames">
-    <!-- ADD HEADERS -->
-    <tr>
-        <th>ID</th>
-            <th>Game</th>
-                <th>Publisher</th>
-    </tr>
-
-    <!-- BIND ARRAY TO TABLE -->
-    <tr *ngFor="let game of arrGames">
-        <td>{{game.ID}}</td>
-            <td>{{game.Title}}</td>
-                <td>{{game.Publisher}}</td>
-    </tr>
-</table>
+<div style="padding: 13px;">
+    <div fxFlex="100%" *ngIf="arrGames.length === 0" style="text-align: center;">
+        <mat-spinner ></mat-spinner>
+    </div>
+    <div class="content" fxLayout="row wrap">
+        <div fxFlex="25%" *ngFor="let product of arrGames;  let i=index">
+            <mat-card class="mat-elevation-z4" *ngIf="i<8">
+                <mat-card-header>
+                    <mat-card-title>{{product.title}}</mat-card-title>
+                    <mat-card-subtitle>{{product.publisher}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content *ngIf="product.store !== 'Steam'">
+                    <img style="height:100%; width: 100%;" src="https://steamcdn-a.akamaihd.net/steam/apps/{{ product.steamUrl.substr(35) }}/header.jpg" />
+                </mat-card-content>
+                <mat-card-actions align="end">
+                    <button mat-button>GAME</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

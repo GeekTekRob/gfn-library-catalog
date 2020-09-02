@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-home',
@@ -9,18 +10,18 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
 
-  constructor (private httpService: HttpClient) { }
-  arrGames: string [];
+  constructor(private apiService: ApiService) {}
+  arrGames = [];
 
   ngOnInit () {
-    this.httpService.get('https://static.nvidiagrid.net/supported-public-game-list/gfnpc.json').subscribe(
-      data => {
-        this.arrGames = data as string [];	 // FILL THE ARRAY WITH DATA.
-        //  console.log(this.arrGames[1]);
+    this.apiService.get().subscribe((data: any[])=>{  
+      console.log(data); 
+      this.arrGames = data; 
       },
       (err: HttpErrorResponse) => {
         console.log (err.message);
       }
     );
   }
+  
 }
