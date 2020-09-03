@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ApiService } from '../api.service';
+import { Game } from '../shared/game';
 
 @Component({
   selector: 'app-home',
