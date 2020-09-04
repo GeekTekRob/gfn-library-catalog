@@ -11,7 +11,7 @@
               <div class="col col-4">Store</div>
             </li>
             <li class="table-row" *ngIf="i<1000">
-                <div class="col col-1" data-label="Title" >{{product.title}} ({{product.sortName}})</div>
+                <div class="col col-1" data-label="Title" >{{product.title}}</div>
                 <div class="col col-2" data-label="Publisher">{{product.publisher}}</div>
                 <div class="col col-3" data-label="GenreIcon">
                   <img style="width:5%;" src="/assets/imgs/Action.png" title="Action" *ngIf="product.genres.includes('Action')"/>

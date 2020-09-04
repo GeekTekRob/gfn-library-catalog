@@ -12,7 +12,7 @@ import { Game } from '../shared/game';
 export class HomeComponent implements OnInit {
 
   constructor(private apiService: ApiService) {}
-  arrGames = [];
+  arrGames: Game[] = [];
 
   ngOnInit () {
     this.apiService.get().subscribe((data: any[])=>{  
