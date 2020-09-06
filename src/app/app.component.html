@@ -1,17 +1,11 @@
-<!-- <mat-toolbar color="primary">
-  <h1>
-    GFN Library Catalog
-  </h1>
-  <button mat-button routerLink="/">Home</button>
-</mat-toolbar> -->
-
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <h1>
-      GFN Library Catalog
+      <a routerLink="/"><img src="../assets/imgs/GFNLibrary.png" style="width:50%;"></a>
     </h1>
     <span class="flexExpand"></span>
-    <a mat-button routerLink="/"> <mat-icon class="iconlarge" [inline]="true">home</mat-icon> </a>
+    <a mat-button routerLink="/"> <mat-icon class="iconlarge" [inline]="true" title="home">home</mat-icon></a>
+    <a mat-button routerLink="/"> <mat-icon class="iconlarge" [inline]="true" title="Info">help_outline</mat-icon></a>
   </mat-toolbar-row>
 </mat-toolbar>
 
