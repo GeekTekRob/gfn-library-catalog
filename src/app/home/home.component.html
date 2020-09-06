@@ -14,27 +14,27 @@
                 <div class="col col-1" data-label="Title" >{{product.title}}</div>
                 <div class="col col-2" data-label="Publisher">{{product.publisher}}</div>
                 <div class="col col-3" data-label="GenreIcon">
-                  <img style="width:5%;" src="/assets/imgs/Action.png" title="Action" *ngIf="product.genres.includes('Action')"/>
-                  <img style="width:5%;" src="/assets/imgs/Adventure.png" title="Adventure" *ngIf="product.genres.includes('Adventure')"/>
-                  <img style="width:5%;" src="/assets/imgs/Casual.png" title="Casual" *ngIf="product.genres.includes('Casual')"/>
-                  <img style="width:5%;" src="/assets/imgs/Family.png" title="Family" *ngIf="product.genres.includes('Family')"/>
-                  <img style="width:5%;" src="/assets/imgs/FPS.png" title="FPS" *ngIf="product.genres.includes('First Person Shooter')"/>
-                  <img style="width:5%;" src="/assets/imgs/Free2Play.png" title="Free To Play" *ngIf="product.genres.includes('Free To Play')"/>
-                  <img style="width:5%;" src="/assets/imgs/Indie.png" title="Indie" *ngIf="product.genres.includes('Indie')"/>
-                  <img style="width:5%;" src="/assets/imgs/MMO.png" title="MMO" *ngIf="product.genres.includes('Massively Multiplayer Online')"/>
-                  <img style="width:5%;" src="/assets/imgs/Platformer.png" title="Platformer" *ngIf="product.genres.includes('Platformer')"/>
-                  <img style="width:5%;" src="/assets/imgs/Racing.png" title="Racing" *ngIf="product.genres.includes('Racing')"/>
-                  <img style="width:5%;" src="/assets/imgs/Roleplaying.png" title="Roleplaying" *ngIf="product.genres.includes('Role Playing')"/>
-                  <img style="width:5%;" src="/assets/imgs/Simulation.png" title="Simulation" *ngIf="product.genres.includes('Simulation')"/>
-                  <img style="width:5%;" src="/assets/imgs/Sports.png" title="Sports" *ngIf="product.genres.includes('Sports')"/>
-                  <img style="width:5%;" src="/assets/imgs/Strategy.png" title="Strategy" *ngIf="product.genres.includes('Strategy')"/>
-                  <img style="width:5%;" src="/assets/imgs/Tech.png" title="Tech" *ngIf="product.genres.includes('Tech Demo')"/>
+                  <img src="/assets/imgs/Action.webp" title="Action" alt="Action" *ngIf="product.genres.includes('Action')"/>
+                  <img src="/assets/imgs/Adventure.webp" title="Adventure" alt="Adventure" *ngIf="product.genres.includes('Adventure')"/>
+                  <img src="/assets/imgs/Casual.webp" title="Casual" alt="Casual" *ngIf="product.genres.includes('Casual')"/>
+                  <img src="/assets/imgs/Family.webp" title="Family" alt="Family" *ngIf="product.genres.includes('Family')"/>
+                  <img src="/assets/imgs/FPS.webp" title="FPS" alt="FPS" *ngIf="product.genres.includes('First Person Shooter')"/>
+                  <img src="/assets/imgs/Free2Play.webp" title="Free To Play" alt="Free To Play" *ngIf="product.genres.includes('Free To Play')"/>
+                  <img src="/assets/imgs/Indie.webp" title="Indie" alt="Indie" *ngIf="product.genres.includes('Indie')"/>
+                  <img src="/assets/imgs/MMO.webp" title="MMO" alt="MMO" *ngIf="product.genres.includes('Massively Multiplayer Online')"/>
+                  <img src="/assets/imgs/Platformer.webp" title="Platformer" alt="Platformer" *ngIf="product.genres.includes('Platformer')"/>
+                  <img src="/assets/imgs/Racing.webp" title="Racing" alt="Racing" *ngIf="product.genres.includes('Racing')"/>
+                  <img src="/assets/imgs/Roleplaying.webp" title="Roleplaying" alt="Roleplaying" *ngIf="product.genres.includes('Role Playing')"/>
+                  <img src="/assets/imgs/Simulation.webp" title="Simulation" alt="Simulation" *ngIf="product.genres.includes('Simulation')"/>
+                  <img src="/assets/imgs/Sports.webp" title="Sports" alt="Sports" *ngIf="product.genres.includes('Sports')"/>
+                  <img src="/assets/imgs/Strategy.webp" title="Strategy" alt="Strategy" *ngIf="product.genres.includes('Strategy')"/>
+                  <img src="/assets/imgs/Tech.webp" title="Tech" alt="Tech" *ngIf="product.genres.includes('Tech Demo')"/>
                 </div>
                 <div class="col col-4" data-label="Store">
-                  <a href="{{product.steamUrl}}" *ngIf="product.store == 'Steam'"><img style="width:8%;" src="/assets/imgs/steam.png" /></a>
-                  <img style="width:8%;" src="/assets/imgs/Origin.png" *ngIf="product.store == 'Origin'"/>
-                  <img style="width:8%;" src="/assets/imgs/Uplay.png" *ngIf="product.store == 'UPLAY'"/>
-                  <img style="width:8%;" src="/assets/imgs/EpicGames.png" *ngIf="product.store == 'Epic'"/>
+                  <a href="{{product.steamUrl}}" *ngIf="product.store == 'Steam'"><img src="/assets/imgs/steam.webp" alt="Steam" /></a>
+                  <img src="/assets/imgs/Origin.webp" *ngIf="product.store == 'Origin'" alt="Origin"/>
+                  <img src="/assets/imgs/Uplay.webp" *ngIf="product.store == 'UPLAY'" alt="UPLAY"/>
+                  <img src="/assets/imgs/EpicGames.webp" *ngIf="product.store == 'Epic'" alt="Epic"/>
                   <span *ngIf="product.publisher == 'NCsoft Corp.'">NCsoft Launcher</span>
                   <span *ngIf="product.publisher == 'Riot Games, Inc.'">LoL Launcher</span>
                   <span *ngIf="product.publisher == 'Wargaming Group Limited'">Wargaming</span>
