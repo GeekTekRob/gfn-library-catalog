@@ -12,12 +12,14 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { NavbarComponent } from './core/navbar/navbar.component';
+import { InfoComponent } from './core/info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
