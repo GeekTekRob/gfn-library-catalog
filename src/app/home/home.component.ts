@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ApiService } from '../api.service';
 import { Game } from '../shared/game';
+import { FilterPipe } from './filter.pipe';
+
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,7 @@ import { Game } from '../shared/game';
 })
 export class HomeComponent implements OnInit {
 
+  public searchText : string;
   constructor(private apiService: ApiService) {}
   arrGames: Game[] = [];
 

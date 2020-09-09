@@ -1,8 +1,12 @@
   <div *ngIf="arrGames.length === 0" style="text-align: center; margin: 0 auto;">
       <mat-spinner ></mat-spinner>
   </div>
-  <!-- <input style="float:right;" [(ngModel)]="searchText" placeholder="search text goes here"> -->
-  <ul class="responsive-table" *ngFor="let product of arrGames;  let i=index;">
+  <div *ngIf="arrGames.length > 0" style="text-align: center; margin: 0 auto; width: 40%;">
+    <input [(ngModel)]="searchText" placeholder="search text goes here">
+  </div>
+  <br><br>
+    
+  <ul class="responsive-table" *ngFor="let product of arrGames | filter: searchText; let i=index;">
     <li class="table-header"  *ngIf="i<1">
       <div class="col col-1">Title</div>
       <div class="col col-2">Publisher</div>
