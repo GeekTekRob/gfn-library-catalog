@@ -15,7 +15,8 @@ import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatInputModule} from '@angular/material/input';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { InfoComponent } from './core/info/info.component';
-import { FilterPipe } from './home/filter.pipe';
+import { FilterPipe } from './list/filter.pipe';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FilterPipe } from './home/filter.pipe';
     HomeComponent,
     NavbarComponent,
     InfoComponent,
-    FilterPipe
+    FilterPipe,
+    ListComponent,
   ],
   imports: [
     BrowserModule,
