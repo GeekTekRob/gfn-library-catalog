@@ -37,17 +37,25 @@
         <img src="/assets/imgs/Tech.webp" title="Tech" alt="Tech" *ngIf="product.genres.includes('Tech Demo')"/>
       </div>
       <div class="col col-4" data-label="Store">
-        <a href="{{product.steamUrl}}" title="Steam_{{product.sortName}}"*ngIf="product.store == 'Steam'"><img src="/assets/imgs/steam.webp" alt="Steam" title="Steam"/></a>
-        <img src="/assets/imgs/Origin.webp" *ngIf="product.store == 'Origin'" alt="Origin" title="Origin"/>
-        <img src="/assets/imgs/Uplay.webp" *ngIf="product.store == 'UPLAY'" alt="UPLAY" title="UPLAY"/>
-        <img src="/assets/imgs/EpicGames.webp" *ngIf="product.store == 'Epic'" alt="Epic" title="Epic"/>
-        <span *ngIf="product.publisher == 'NCsoft Corp.'">NCsoft Launcher</span>
-        <span *ngIf="product.publisher == 'Riot Games, Inc.'">LoL Launcher</span>
-        <span *ngIf="product.publisher == 'Wargaming Group Limited'">Wargaming</span>
-        <span *ngIf="product.publisher == 'Bethesda Softworks' && product.store == ''">Bethesda Launcher</span>
-        <span *ngIf="product.publisher == 'Gaijin Entertainment'">WARTHUNDER</span>
-        <span *ngIf="product.publisher == 'DMM Games'">WARTHUNDER Japan</span>
-        <span *ngIf="product.publisher == 'Mail.ru Group' && product.store == ''"All>Warface Launcher</span>
+        <div class="store-container">
+          <a href="{{product.steamUrl}}" title="Steam_{{product.sortName}}"*ngIf="product.store == 'Steam'">
+            <svg-steam name="steam-icon"></svg-steam>
+          </a>
+          <span *ngIf="product.store == 'Epic'" title="Epic">
+            <svg-epic></svg-epic>
+          </span>
+          <img src="/assets/imgs/Origin.webp" *ngIf="product.store == 'Origin'" alt="Origin" title="Origin"/>
+          <img src="/assets/imgs/Uplay.webp" *ngIf="product.store == 'Ubisoft Connect'" alt="Ubisoft Connect" title="Ubisoft Connect"/>
+          <span *ngIf="product.store !== 'Origin' && product.store !== 'Steam' && product.store !== 'Epic' && product.store !== 'Ubisoft Connect' && product.store !== null">{{product.store}}</span>
+          <span *ngIf="product.store == null">{{product.publisher}}</span>
+          <span *ngIf="product.publisher == 'NCsoft Corp.'">NCsoft Launcher</span>
+          <span *ngIf="product.publisher == 'Riot Games, Inc.'">LoL Launcher</span>
+          <span *ngIf="product.publisher == 'Wargaming Group Limited'">Wargaming</span>
+          <span *ngIf="product.publisher == 'Bethesda Softworks' && product.store == ''">Bethesda Launcher</span>
+          <span *ngIf="product.publisher == 'Gaijin Entertainment'">WARTHUNDER</span>
+          <span *ngIf="product.publisher == 'DMM Games'">WARTHUNDER Japan</span>
+          <span *ngIf="product.publisher == 'Mail.ru Group' && product.store == ''"All>Warface Launcher</span>
+        </div>
       </div>
   </li>
 </ul>
