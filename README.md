@@ -1,4 +1,4 @@
-# [![GfnLibraryCatalog](/src/assets/imgs/gfn-library_Banner.png?raw=true)](https://github.com/GeekTekRob/gfn-library-catalog/)
+# [![GfnLibraryCatalog](/.github/images/gfn-library_Banner.png?raw=true)](https://github.com/GeekTekRob/gfn-library-catalog/)
 
 <div align="center">
 
