@@ -18,8 +18,6 @@ import { InfoComponent } from './core/info/info.component';
 import { FilterPipe } from './list/filter.pipe';
 import { ListComponent } from './list/list.component';
 import { LogoComponent } from './shared/svgs/logo.component';
-import { EpicComponent } from './shared/svgs/epic.component';
-import { SteamComponent } from './shared/svgs/steam.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +28,6 @@ import { SteamComponent } from './shared/svgs/steam.component';
     FilterPipe,
     ListComponent,
     LogoComponent,
-    EpicComponent,
-    SteamComponent,
   ],
   imports: [
     BrowserModule,
