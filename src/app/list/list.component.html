@@ -16,24 +16,36 @@
     <div class="col col-3">Genre(s)</div>
     <div class="col col-4">Store</div>
   </li>
-  <li class="table-row" *ngIf="i<1000">
+  <li class="table-row" *ngIf="i<1000  && product.title !== ''">
       <div class="col col-1" data-label="Title" >{{product.title}}</div>
       <div class="col col-2" data-label="Publisher">{{product.publisher}}</div>
       <div class="col col-3" data-label="GenreIcon">
         <img src="/assets/imgs/Action.webp" title="Action" alt="Action" *ngIf="product.genres.includes('Action')"/>
+        <img src="/assets/imgs/Action.webp" title="Action" alt="Action" *ngIf="product.genres.includes('Akcijske')"/>
         <img src="/assets/imgs/Adventure.webp" title="Adventure" alt="Adventure" *ngIf="product.genres.includes('Adventure')"/>
+        <img src="/assets/imgs/Adventure.webp" title="Adventure" alt="Adventure" *ngIf="product.genres.includes('Avanturističke')"/>
         <img src="/assets/imgs/Casual.webp" title="Casual" alt="Casual" *ngIf="product.genres.includes('Casual')"/>
+        <img src="/assets/imgs/Casual.webp" title="Casual" alt="Casual" *ngIf="product.genres.includes('Obične')"/>
         <img src="/assets/imgs/Family.webp" title="Family" alt="Family" *ngIf="product.genres.includes('Family')"/>
         <img src="/assets/imgs/FPS.webp" title="FPS" alt="FPS" *ngIf="product.genres.includes('First Person Shooter')"/>
+        <img src="/assets/imgs/FPS.webp" title="FPS" alt="FPS" *ngIf="product.genres.includes('Pucanje u prvom licu')"/>
         <img src="/assets/imgs/Free2Play.webp" title="Free To Play" alt="Free To Play" *ngIf="product.genres.includes('Free To Play')"/>
+        <img src="/assets/imgs/Free2Play.webp" title="Free To Play" alt="Free To Play" *ngIf="product.genres.includes('Besplatno za igranje')"/>
         <img src="/assets/imgs/Indie.webp" title="Indie" alt="Indie" *ngIf="product.genres.includes('Indie')"/>
         <img src="/assets/imgs/MMO.webp" title="MMO" alt="MMO" *ngIf="product.genres.includes('Massively Multiplayer Online')"/>
+        <img src="/assets/imgs/MMO.webp" title="MMO" alt="MMO" *ngIf="product.genres.includes('Velike internetske igre za više igrača')"/>
         <img src="/assets/imgs/Platformer.webp" title="Platformer" alt="Platformer" *ngIf="product.genres.includes('Platformer')"/>
+        <img src="/assets/imgs/Platformer.webp" title="Platformer" alt="Platformer" *ngIf="product.genres.includes('Igre na platformi')"/>
         <img src="/assets/imgs/Racing.webp" title="Racing" alt="Racing" *ngIf="product.genres.includes('Racing')"/>
+        <img src="/assets/imgs/Racing.webp" title="Racing" alt="Racing" *ngIf="product.genres.includes('Utrke')"/>
         <img src="/assets/imgs/Roleplaying.webp" title="Roleplaying" alt="Roleplaying" *ngIf="product.genres.includes('Role Playing')"/>
+        <img src="/assets/imgs/Roleplaying.webp" title="Roleplaying" alt="Roleplaying" *ngIf="product.genres.includes('Igre s ulogama')"/>
         <img src="/assets/imgs/Simulation.webp" title="Simulation" alt="Simulation" *ngIf="product.genres.includes('Simulation')"/>
+        <img src="/assets/imgs/Simulation.webp" title="Simulation" alt="Simulation" *ngIf="product.genres.includes('Simulacijske')"/>
         <img src="/assets/imgs/Sports.webp" title="Sports" alt="Sports" *ngIf="product.genres.includes('Sports')"/>
+        <img src="/assets/imgs/Sports.webp" title="Sports" alt="Sports" *ngIf="product.genres.includes('Sportske')"/>
         <img src="/assets/imgs/Strategy.webp" title="Strategy" alt="Strategy" *ngIf="product.genres.includes('Strategy')"/>
+        <img src="/assets/imgs/Strategy.webp" title="Strategy" alt="Strategy" *ngIf="product.genres.includes('Strateške')"/>
         <img src="/assets/imgs/Tech.webp" title="Tech" alt="Tech" *ngIf="product.genres.includes('Tech Demo')"/>
       </div>
       <div class="col col-4" data-label="Store">

@@ -6,7 +6,10 @@ const limiter = rateLimit({
   });
 const app = express()
 app.use(compression())
-
+const limiter = rateLimit({
+    windowMs: 60 * 1000, 
+    max: 5
+  });
 
 app.use(express.static('./dist/gfn-library-catalog'));
 
