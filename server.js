@@ -2,11 +2,14 @@ const compression = require('compression')
 const express = require('express')
 const app = express()
 app.use(compression())
-
+const limiter = rateLimit({
+    windowMs: 60 * 1000, 
+    max: 5
+  });
 
 app.use(express.static('./dist/gfn-library-catalog'));
 
-app.get('/*', (req, res) =>
+app.get('/*', limiter, (req, res) =>
     res.sendFile('index.html', {root: 'dist/gfn-library-catalog/'}),
 );
 
